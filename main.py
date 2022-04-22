@@ -18,8 +18,11 @@ pepperoni_medium_large = 3
 if add_pepperoni == "Y":
   if size == "S":
     print(f"That will be ${S + pepperoni_small}.") 
-  if size == "M" or "L":
-    print(f"That will be ${(M or L) + pepperoni_medium_large}.")
+  if size == "M":
+    print(f"That will be ${M + pepperoni_medium_large}.")
+  if size == "L":
+    print(f"That will be ${L + pepperoni_medium_large}.")
+
 
 extra_cheese = input("Do you want extra cheese? Y or N ")
 any_size_cheese = 1
@@ -29,12 +32,18 @@ if extra_cheese == "Y":
       print(f"That will be ${S + pepperoni_small + any_size_cheese}.")
     else:
       print(f"That will be ${S + any_size_cheese}.")
-  if size == "M" or "L":
+  if size == "M":
     if add_pepperoni == "Y":
-      print(f"That will be ${M or L + pepperoni_medium_large + any_size_cheese}.")
+      print(f"That will be ${M + pepperoni_medium_large + any_size_cheese}.")
     else:
-      print(f"That will be ${M or L + any_size_cheese}.")
+      print(f"That will be ${M + any_size_cheese}.")
+  if size == "L":
+    if add_pepperoni == "Y":
+      print(f"That will be ${L + pepperoni_medium_large + any_size_cheese}.")
+    else:
+      print(f"That will be ${L + any_size_cheese}.")
 else:
   print("Goodbyeee!")
+print("Thank you for oderding Mario's Pizza, have a nice day!")
 
           
